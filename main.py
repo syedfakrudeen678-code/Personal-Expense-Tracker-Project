@@ -28,7 +28,7 @@ def main():
         print_menu()
         choice = input("Choose an option: ").strip()
 
-        # ── 1. Add Expense ──────────────────────────
+        #  1. Add Expense 
         if choice == "1":
             print("\n── Add New Expense ──")
             amount = get_valid_amount()
@@ -37,11 +37,11 @@ def main():
             date = get_valid_date()
             add_expense(amount, category, note, date)
 
-        # ── 2. View All ─────────────────────────────
+        #  2. View All 
         elif choice == "2":
             view_expenses()
 
-        # ── 3. Filter ───────────────────────────────
+        #  3. Filter 
         elif choice == "3":
             print("\n── Filter Expenses ──")
             print("  1. By Category")
@@ -61,11 +61,11 @@ def main():
             else:
                 print(" Invalid choice.")
 
-        # ── 4. Summary ──────────────────────────────
+        #  4. Summary 
         elif choice == "4":
             total_summary()
 
-        # ── 5. Delete ───────────────────────────────
+        #  5. Delete 
         elif choice == "5":
             view_expenses()
             try:
@@ -74,16 +74,16 @@ def main():
             except ValueError:
                 print(" Please enter a valid numeric ID.")
 
-        # ── 6. Search ───────────────────────────────
+        #  6. Search 
         elif choice == "6":
             keyword = input("Enter keyword to search: ")
             search_expenses(keyword)
 
-        # ── 7. Export CSV ───────────────────────────
+        #  7. Export CSV 
         elif choice == "7":
             export_to_csv()
 
-        # ── 0. Exit ─────────────────────────────────
+        #  0. Exit 
         elif choice == "0":
             print("\n Goodbye! Keep tracking your expenses!\n")
             break
